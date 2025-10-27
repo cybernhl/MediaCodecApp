@@ -1,4 +1,4 @@
-package com.test.mediacodecapp;
+package com.test.mediadecoder;
 
 import android.media.MediaCodec;
 import android.media.MediaCodecInfo;
@@ -23,7 +23,7 @@ public class MediaDecoder {
 	private int mTrackIndex = -1;
 	private final Surface mSurface;
 	private final OnFrameAvailabkeListener mFrameListener;
-	public MediaDecoder(String path, Surface surface, MediaCodecApp activity, OnFrameAvailabkeListener l) {
+	public MediaDecoder(String path, Surface surface,  OnFrameAvailabkeListener l) {
 		mFilePath = path;
 		mSurface = surface;
 		mFrameListener = l;

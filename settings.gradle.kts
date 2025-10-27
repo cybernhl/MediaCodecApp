@@ -77,5 +77,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "MediaCodecApp"
+include(":mediadecoder")
 include(":app")
- 

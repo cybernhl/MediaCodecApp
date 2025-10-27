@@ -16,6 +16,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import com.test.mediadecoder.MediaDecoder;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -95,7 +96,7 @@ public class MediaCodecApp extends Activity {
 		if (mDecoder != null) {
 			mDecoder.release();
 		}
-		mDecoder = new MediaDecoder(mVideoPath, surface, this, new MediaDecoder.OnFrameAvailabkeListener() {
+		mDecoder = new MediaDecoder(mVideoPath, surface,  new MediaDecoder.OnFrameAvailabkeListener() {
 			@Override
 			public void onFrameAvailable(long timestamp, int index, boolean EOS) {
 				Log.i(TAG, "Frame available, index=" + index + ", EOS=" + EOS);
